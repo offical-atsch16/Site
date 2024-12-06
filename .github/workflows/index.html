@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coole HTML-Seite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #2c3e50;
+            color: white;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20%;
+            animation: glow 1s infinite alternate;
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #3498db, 0 0 20px #2980b9, 0 0 30px #3498db;
+            }
+            to {
+                text-shadow: 0 0 20px #e74c3c, 0 0 30px #c0392b, 0 0 40px #e74c3c;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="dynamicText">Willkommen auf meiner coolen Seite!</h1>
+    <button onclick="changeBackground()">Ändere die Hintergrundfarbe</button>
+    <script>
+        const messages = [
+            "Willkommen auf meiner coolen Seite!",
+            "HTML kann Spaß machen
